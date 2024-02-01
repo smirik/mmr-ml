@@ -12,7 +12,7 @@ import itertools
 DEBUG = True
 TRAIN_SIZES = [22150]
 MAX_ASTEROID_NUMBER = 640000
-ASTEROID_NUMBERS_FILE = 'cache/4J-2S-1.csv'
+POSITIVE_OBJECTS_FILE = 'cache/4J-2S-1.csv'
 OUTPUT_FILE = 'astrobook_kNN_k.csv'
 features = ['mag', 'a', 'e', 'sinI', 'n']
 FEATURES_COMBINATIONS = [['a', 'n']]

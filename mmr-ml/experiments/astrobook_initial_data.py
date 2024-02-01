@@ -11,10 +11,10 @@ from imblearn.ensemble import BalancedRandomForestClassifier
 
 DEBUG = True
 MAX_ASTEROID_NUMBER = 640000
-ASTEROID_NUMBERS_FILE = 'cache/4J-2S-1.csv'
+POSITIVE_OBJECTS_FILE = 'cache/4J-2S-1.csv'
 
 TRAIN_SIZES = []
-with open(ASTEROID_NUMBERS_FILE, 'r') as file:
+with open(POSITIVE_OBJECTS_FILE, 'r') as file:
     for i, line in enumerate(file):
         if i >= 200:  # stop after reading 100 lines
             break

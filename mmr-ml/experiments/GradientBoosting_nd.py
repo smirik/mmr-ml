@@ -12,7 +12,7 @@ import itertools
 DEBUG = True
 TRAIN_SIZES = [17000, 41000]
 MAX_ASTEROID_NUMBER = 640000
-ASTEROID_NUMBERS_FILE = 'cache/4J-2S-1.csv'
+POSITIVE_OBJECTS_FILE = 'cache/4J-2S-1.csv'
 OUTPUT_FILE = 'GB_ND2.csv'
 features = ['a', 'e', 'sinI', 'n']
 # FEATURES_COMBINATIONS = [list(comb) for i in range(1, len(features) + 1) for comb in itertools.combinations(features, i)]
