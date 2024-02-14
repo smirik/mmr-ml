@@ -1,7 +1,8 @@
 from sklearn.metrics import confusion_matrix, accuracy_score, precision_score, recall_score, f1_score
+from typing import Dict, List, Any, Tuple
 
 
-def prepare_data_and_labels(data_dict, asteroids, features):
+def prepare_data_and_labels(data_dict: Dict[str, Any], asteroids: List[Any], features: List[str]) -> Tuple[List[List[Any]], List[Any]]:
     prepared_data = []
     filtered_asteroids = []
     for asteroid in asteroids:
@@ -20,7 +21,6 @@ def train_model(model, train_data, train_labels):
     return model
 
 
-# Evaluate the model
 def evaluate_model(model, test_data, test_labels):
     predictions = model.predict(test_data)
     tn, fp, fn, tp = confusion_matrix(test_labels, predictions, labels=[0, 1]).ravel()

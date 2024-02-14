@@ -6,13 +6,13 @@ astdys.astdys.catalog_type = 'synthetic'
 
 
 # Fetch data for asteroids
-def get_asteroids_data(asteroids: List[int]) -> dict[str, dict[str, Union[float, int]]]:
+def get_asteroids_data(asteroids: List[int]):
     return astdys.astdys.search(asteroids)
 
 
-def get_train_set(train_size: dict[str, int], positives_set: set[int], negatives_set: set[int]) -> List[int]:
-    positive_samples = list(positives_set)[: train_size['positive']]
-    negative_samples = list(negatives_set)[: train_size['negative']]
+def get_train_set(train_size: dict[str, int], positives_lst: list[int], negatives_lst: list[int]) -> List[int]:
+    positive_samples = positives_lst[: train_size['positive']]
+    negative_samples = negatives_lst[: train_size['negative']]
 
     return positive_samples + negative_samples
 

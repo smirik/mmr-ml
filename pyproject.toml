@@ -1,11 +1,11 @@
 [tool.poetry]
-name = "mmr-ml"
+name = "mmr_ml"
 version = "0.1.0"
 description = "Classical Machine-Learning Approach to the identification of mean-motion resonances"
 authors = ["Evgeny Smirnov <smirik@gmail.com>"]
 license = "MIT"
 readme = "README.md"
-packages = [{ include = "mmr-ml" }]
+packages = [{ include = "mmr_ml" }]
 
 [tool.poetry.dependencies]
 python = "^3.11"

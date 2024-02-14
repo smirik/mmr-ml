@@ -5,6 +5,8 @@ from asteroids import read_file
 from simulation import run_simulation
 from typing import TYPE_CHECKING
 
+TEST_LST = False
+
 
 def import_file_variables(file_path):
     spec = importlib.util.spec_from_file_location("module_name", file_path)
@@ -22,8 +24,7 @@ if TYPE_CHECKING:
     MODELS: dict[str, object]
     FEATURES_COMBINATIONS: list[list[str]]
     DEBUG: bool
-
-# from experiments.astrobook_initial_data import *
+    TEST_LST: bool or list
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
@@ -37,18 +38,21 @@ if __name__ == "__main__":
     if len(sys.argv) > 2:
         OUTPUT_FILE = sys.argv[2]
 
-positives_set = set(read_file(POSITIVE_OBJECTS_FILE))
-negatives_set = set(read_file(NEGATIVE_OBJECTS_FILE))
-test_set = set(read_file(TEST_SET_FILE))
+positives_lst = read_file(POSITIVE_OBJECTS_FILE)
+negatives_lst = read_file(NEGATIVE_OBJECTS_FILE)
+
+if TEST_LST:
+    test_lst = TEST_LST
+else:
+    test_lst = read_file(TEST_SET_FILE)
 
 results = run_simulation(
-    positives_set=positives_set,
-    negatives_set=negatives_set,
-    test_set=test_set,
-    test_sizes=test_set,
+    positives_lst=positives_lst,
+    negatives_lst=negatives_lst,
+    test_lst=test_lst,
+    test_sizes=TEST_SIZES,
     models=MODELS,
     features_combinations=FEATURES_COMBINATIONS,
-    test_sizes=TEST_SIZES,
     train_sizes=TRAIN_SIZES,
     debug=DEBUG,
 )

@@ -1,5 +1,6 @@
 cache
 input 
+experiments
 *.csv 
 **/.DS_Store
 
