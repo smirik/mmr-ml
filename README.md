@@ -13,8 +13,10 @@ git clone https://github.com/smirik/mmr-ml.git
 **Will be updated soon**
 
 1. Create a folder `cache` in the main directory.
-2. Use the examples from `examples` folder to run simulations.
-3. Check `mmr_ml/__main__.py` on how to run the code as a package.
+1. Install all dependencies through poetry: `poetry install`.
+1. Run commands from poetry shell: `poetry shell`.
+1. Use the examples from `examples` folder to run simulations.
+1. Check `mmr_ml/__main__.py` on how to run the code as a package.
 
 ### Structure
 
