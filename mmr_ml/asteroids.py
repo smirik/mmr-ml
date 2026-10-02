@@ -2,7 +2,7 @@ import astdys.astdys
 from typing import List, Union
 
 # Set catalog type to synthetic for proper elements
-astdys.astdys.catalog_type = 'synthetic'
+astdys.astdys.catalog_type = 'osculating'
 
 
 # Fetch data for asteroids

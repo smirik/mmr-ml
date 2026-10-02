@@ -32,7 +32,6 @@ def run_simulation(
                         print(f"Going for model = {model_name}, features = {features}")
                     prepared_train_data, filtered_train_asteroids = prepare_data_and_labels(train_data_dict, train_asteroids, features)
                     train_labels = [1 if num in positives_lst else 0 for num in filtered_train_asteroids]
-
                     trained_model = train_model(model, prepared_train_data, train_labels)
 
                     test_asteroids = test_lst[:test_size]
